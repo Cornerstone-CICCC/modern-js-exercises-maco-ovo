@@ -55,7 +55,7 @@ return encodeText;
     Space Complexity : O(n).  Big Oh of N
     Time Complexity : O(n)  number of iterations
 
-    in terms of "n";
+   in terms of "n";
 
 */ 
 
