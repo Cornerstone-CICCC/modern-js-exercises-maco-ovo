@@ -1,16 +1,32 @@
-/*In this exercise, we will be given a list of instructors and we will create a single object to organize them based on their course.
+/*
+In this exercise, we will be given a list of instructors 
+and we will create a single object to organize them based on their course.
 
-Instruction
-Create a function named organizeInstructors that will receive an array of instructor objects, and will return a new object that has the following format:
+> Instruction
+? Create a function named organizeInstructors that will receive an array of instructor objects,
+? and will return a new object that has the following format:
 
-{
-  CourseName: [instructors]
-} 
+ {
+   CourseName: [instructors]
+ } 
 */
 
+
 const organizeInstructors = function (instructors) {
-  // Put your solution here
+  let organized = {};
+
+  for (let instructor of instructors) {
+    if (organized[instructor.course]) {   // if the course already exists
+      organized[instructor.course].push(instructor.name);
+    } else {    // it the course appears for the first time
+      organized[instructor.course] = []
+      organized[instructor.course].push(instructor.name);
+    }
+  }
+  return organized;
 };
+
+
 
 console.log(
   organizeInstructors([
@@ -19,7 +35,9 @@ console.log(
     { name: "Karim", course: "Web" },
     { name: "Donald", course: "Web" },
   ])
-); // { iOS: ["Samuel"], Web: ["Victoria", "Karim", "Donald"]}
+); 
+// { iOS: ["Samuel"], Web: ["Victoria", "Karim", "Donald"]}
+
 console.log(
   organizeInstructors([
     { name: "Brendan", course: "Blockchain" },
@@ -27,6 +45,7 @@ console.log(
     { name: "Martha", course: "iOS" },
     { name: "Carlos", course: "Web" },
   ])
-); //{ Blockchain: ["Brendan"], Web: ["David", "Carlos"], iOS: ["Martha"]}
+); 
+//{ Blockchain: ["Brendan"], Web: ["David", "Carlos"], iOS: ["Martha"]}
 
 module.exports = organizeInstructors;

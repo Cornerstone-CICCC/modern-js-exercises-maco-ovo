@@ -1,15 +1,20 @@
 /*
 In this exercise, we will be converting a normal string into camelCase text.
 
-Case Maker
-We will receive a normal string of words separated with spaces as the input. Our job is to convert these strings into camel cased strings.
+- Case Maker
+- We will receive a normal string of words separated with spaces as the input. 
+- Our job is to convert these strings into camel cased strings.
 
-Instruction
-Create a function named camelCase that will convert a string to camel case, and return the result.
+> Instruction
+? Create a function named camelCase that will convert a string to camel case, and return the result.
 */
 
 const camelCase = function (input) {
-  // Your code here
+  let words = input.split(" ");
+  for ( i = 1; i < words.length; i++ ) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+  }
+  return words.join("");
 };
 
 console.log(camelCase("this is a string")); // thisIsAString
