@@ -33,14 +33,39 @@ Note: There may be multiple available spots for a particular vehicle.
       And if there are no available spots, remember to return false.
 */
 
+// // in class // // 
+
+const whereCanIPark2 = function (spots, vehicle) { 
+
+  const vehicleTypes = {
+    regular : ["R"],
+    small : ["R", "S"],
+    motorcycle : ["R", "S", "M"]
+  }
+
+  for ( let y = 0; y < spots.length; y++){ 
+    // console.log('y at ', spots[y]);
+    for (let x = 0; x < spots[y].length; x++){
+      // console.log('x at ', spots[y][x]);
+
+      if (vehicleTypes[vehicle].includes[spots[y][x]] ){
+        return [x,y];
+      }
+    }  
+  }
+  return false;
+}
+
+
+
 const whereCanIPark = function (spots, vehicle) { 
 
-  for( y of spots ) {
+  for( let y of spots ) {
     const available = y.find((x) => {
       return (x === "R" || x === "S" || x === "M");
     })
     if ( available ) {
-      for ( x of y ) {
+      for ( let x of y ) {
         let X = y.indexOf(x)
         let Y = spots.indexOf(y)
         if (vehicle == "motorcycle" && (x === "R" || x === "S" || x === "M")) {
@@ -58,7 +83,7 @@ const whereCanIPark = function (spots, vehicle) {
 
 
 console.log(
-  whereCanIPark(
+  whereCanIPark2(
     [
       // COLUMNS ARE X
       // 0    1    2    3    4    5
@@ -74,7 +99,7 @@ console.log(
 ); //[4, 0]
 
 console.log(
-  whereCanIPark(
+  whereCanIPark2(
     [
       ["M", "M", "M", "M"],
       ["M", "s", "M", "M"],

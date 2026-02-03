@@ -36,6 +36,9 @@ const checkAir = function (samples, threshold) {
   }
 };
 
+// const ratio = dirtyCount / samples.lengh;
+// return ratio >= threshold ? "Polluted" : "Clear";
+
 console.log(
   checkAir(
     [

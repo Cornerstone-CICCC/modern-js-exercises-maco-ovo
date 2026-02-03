@@ -12,7 +12,7 @@ In this exercise, we will be converting a normal string into camelCase text.
 const camelCase = function (input) {
   let words = input.split(" ");
   for ( i = 1; i < words.length; i++ ) {
-    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
   }
   return words.join("");
 };
@@ -22,3 +22,8 @@ console.log(camelCase("loopy cornerstone")); //loopyCornerstone
 console.log(camelCase("supercalifragalisticexpialidocious")); // supercalifragalisticexpialidocious
 
 module.exports = camelCase;
+
+/*
+  Space / memory complexity: O(n) ; n is the size of the input string
+  Time complexity: O(m) ; linear time ; m is the size of the input string
+*/   

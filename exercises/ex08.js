@@ -38,3 +38,10 @@ console.log(
 ); // 10101010, 343434343434, 9292
 
 module.exports = repeatNumbers;
+
+
+
+/*
+  Time Complexity: O(n) ; n is the size of data input
+  Space Complexity: O(n)
+*/ 
