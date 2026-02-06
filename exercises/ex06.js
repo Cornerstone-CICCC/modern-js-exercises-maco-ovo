@@ -111,7 +111,7 @@ console.log(
 ); //false
 
 console.log(
-  whereCanIPark(
+  whereCanIPark2(
     [
       ["s", "s", "s", "s", "s", "s"],
       ["s", "m", "s", "S", "r", "s"],

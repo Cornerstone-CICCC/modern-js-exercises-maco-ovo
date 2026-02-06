@@ -49,3 +49,10 @@ console.log(
 //{ Blockchain: ["Brendan"], Web: ["David", "Carlos"], iOS: ["Martha"]}
 
 module.exports = organizeInstructors;
+
+/*
+  Space / memory complexity:  O(n) n is the input size
+  
+  Time complexity: O(n) where n is the size of input 
+   
+*/  

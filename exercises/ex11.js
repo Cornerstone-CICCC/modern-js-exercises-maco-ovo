@@ -98,3 +98,8 @@ module.exports = {
   coneVolume,
   prismVolume,
 };
+
+/*
+  Space complexity: O(1) ; using a constant amount of space regardless of the input size
+  Time complexity: O(n) ; iterating through the solids array once, where n is the number of shapes in the solids array
+*/
